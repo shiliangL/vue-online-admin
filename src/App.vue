@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <h3>测试验证持续集成、自动化部署</h3>
     <router-view/>
   </div>
 </template>
