@@ -1,0 +1,49 @@
+@import '~iview/src/styles/index.less';
+
+@primary-color: #1cbc9c;
+
+// 系统样式
+body,
+html,
+.layout,
+.layout-content,
+#app{
+  width: 100%;
+  height: 100%;
+}
+
+.layout {
+  padding-top: 64px;
+  border: 1px solid #d7dde4;
+  background: #f5f7f9;
+  .layout-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .layout-content{
+    width: 100%;
+    height: 100%;
+  }
+
+  .layout-content-main{
+    width: 100%;
+    height: 100%;
+    .layout-content{
+      // width: 100%;
+      // height: 100%;
+      .content-row{
+        width: 100%;
+        height: 100%;
+        .content-span{
+          height: 100%;
+          .content-menu{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
