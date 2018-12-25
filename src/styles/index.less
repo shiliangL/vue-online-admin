@@ -1,4 +1,4 @@
-@import '~iview/src/styles/index.less';
+@import "~iview/src/styles/index.less";
 
 @primary-color: #1cbc9c;
 
@@ -7,7 +7,7 @@ body,
 html,
 .layout,
 .layout-content,
-#app{
+#app {
   width: 100%;
   height: 100%;
 }
@@ -16,34 +16,156 @@ html,
   padding-top: 64px;
   border: 1px solid #d7dde4;
   background: #f5f7f9;
-  .layout-header{
+  .layout-header {
     position: fixed;
+    background: #fff;
     width: 100%;
+    height: 60px;
     top: 0;
     left: 0;
   }
 
-  .layout-content{
+  .layout-content {
     width: 100%;
     height: 100%;
   }
 
-  .layout-content-main{
+  .layout-content-main {
     width: 100%;
     height: 100%;
-    .layout-content{
+    overflow-y: auto;
+    .layout-content {
       // width: 100%;
       // height: 100%;
-      .content-row{
+      .content-row {
         width: 100%;
         height: 100%;
-        .content-span{
+        .content-span {
           height: 100%;
-          .content-menu{
+          .content-menu {
             height: 100%;
           }
         }
       }
     }
   }
+}
+
+/**
+ * 列表界面头部样式
+ *
+ */
+.search-bar {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 5px;
+  background-color: white;
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+  .left {
+    float: left;
+    margin-left: 5px;
+    height: 40px;
+  }
+  .right {
+    float: right;
+    margin-right: 5px;
+    .left {
+      margin: 0 10px;
+    }
+  }
+}
+
+// 宽度 80 -220
+.w280 {
+  width: 280px;
+}
+.w220 {
+  width: 220px;
+}
+
+.w210 {
+  width: 210px;
+}
+
+.w200 {
+  width: 200px;
+}
+
+.w190 {
+  width: 190px;
+}
+
+.w180 {
+  width: 180px;
+}
+
+.w170 {
+  width: 170px;
+}
+
+.w160 {
+  width: 160px;
+}
+
+.w150 {
+  width: 150px;
+}
+
+.w140 {
+  width: 140px;
+}
+
+.w130 {
+  width: 130px;
+}
+
+.w120 {
+  width: 120px;
+}
+
+.w110 {
+  width: 110px;
+}
+.w210 {
+  width: 210px;
+}
+
+.w100 {
+  width: 100px;
+}
+
+.w90 {
+  width: 90px;
+}
+
+.w80 {
+  width: 80px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }

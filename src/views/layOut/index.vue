@@ -3,38 +3,44 @@
   <div class="layout">
 
     <div class="layout-header">
-      <!-- <div class="layout-logo"></div> -->
-      <Menu mode="horizontal" active-name="1">
-        <div class="layout-assistant">
-          <Menu-item name="1">运营中心</Menu-item>
-          <Menu-item name="2">客户中心</Menu-item>
-          <Menu-item name="3">供应链</Menu-item>
-        </div>
-      </Menu>
+      <div class="layout-logo"></div>
     </div>
     <div class="layout-content-main">
       <div class="layout-content">
         <Row class="content-row">
           <i-col class="content-span" span="4">
-            <Menu class="content-menu" width="auto" accordion>
+            <Menu class="content-menu" width="auto" accordion @on-select="selectMenu">
+              <Submenu name="0">
+                <template slot="title">
+                  <Icon type="ios-keypad"></Icon>
+                  组件开发
+                </template>
+                <Menu-item name="/app/searchBar">搜索栏</Menu-item>
+                <Menu-item name="/app/textEditor">富文本</Menu-item>
+                <Menu-item name="/app/textMarkdown">markdown</Menu-item>
+                <Menu-item name="/app/imageUp">图片上传</Menu-item>
+              </Submenu>
               <Submenu name="1">
                 <template slot="title">
-                  <Icon type="ios-navigate"></Icon>商品管理
+                  <Icon type="ios-keypad"></Icon>
+                  商品管理
                 </template>
-                <Menu-item name="1-1">添加商品</Menu-item>
-                <Menu-item name="1-2">商品列表</Menu-item>
-                <Menu-item name="1-3">商品分类</Menu-item>
+                <Menu-item name="/goods/addgoods">添加商品</Menu-item>
+                <Menu-item name="/goods/goodsList">商品列表</Menu-item>
+                <Menu-item name="/goods/goodsClass">商品分类</Menu-item>
               </Submenu>
               <Submenu name="2">
                 <template slot="title">
-                  <Icon type="ios-keypad"></Icon>订单管理
+                  <Icon type="ios-keypad"></Icon>
+                  订单管理
                 </template>
                 <Menu-item name="2-1">订单列表</Menu-item>
                 <Menu-item name="2-2">订单设置</Menu-item>
               </Submenu>
               <Submenu name="3">
                 <template slot="title">
-                  <Icon type="ios-analytics"></Icon>营销管理
+                  <Icon type="ios-keypad"></Icon>
+                  营销管理
                 </template>
                 <Menu-item name="3-1">品牌推荐</Menu-item>
                 <Menu-item name="3-2">新品推荐</Menu-item>
@@ -44,7 +50,8 @@
             </Menu>
           </i-col>
           <i-col class="content-span" span="20">
-            <div class="layout-content-main">内容区域
+            <div class="layout-content-main">
+              <!-- 内容区域 -->
               <router-view/>
             </div>
           </i-col>
@@ -56,7 +63,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    selectMenu (item) {
+      if (!item) return
+      this.$router.push(item)
+    }
+  }
+}
 </script>
 
 <style scoped lang="less">
@@ -72,12 +86,6 @@ export default {}
   z-index: 9999;
 }
 
-.layout-assistant {
-  padding-left: 330px;
-}
-.layout-breadcrumb {
-  padding: 10px 15px 0;
-}
 .layout-content {
   overflow: hidden;
   background: #fff;

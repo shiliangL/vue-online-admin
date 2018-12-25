@@ -14,6 +14,7 @@ module.exports = {
       '/':{
         // target: 'http://39.108.235.6/', // 正式
         target: 'http://39.108.235.6:9002/', // 服务器dev
+        // target: 'http://39.108.235.6:9002/', // 服务器dev
         changeOrigin: true,
       }
     },
