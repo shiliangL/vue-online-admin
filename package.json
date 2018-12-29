@@ -1,0 +1,23 @@
+{
+  "name": "vue-online-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiliangL/vue-online-admin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiliangL/vue-online-admin/issues"
+  },
+  "homepage": "https://github.com/shiliangL/vue-online-admin#readme",
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
+  }
+}
