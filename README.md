@@ -1,21 +1,15 @@
-# vue-line
+### 一个移动端商城项目
 
-> A Vue.js project
+> 写在前面的开始
 
-## Build Setup
+一开始是规划写个东西然后公众号对接过来的,然后倒腾一下公众号发现并没有认证,及时有认证了,也是还是需要后台去设置配置一些。
+所以先这样,以后有机会了再和后台的同学对接一下吧。
 
-``` bash
-# install dependencies
-npm install
+
+> 项目截图
 
-# serve with hot reload at localhost:8080
-npm run dev
+> 一些点点
 
-# build for production with minification
-npm run build
+> 项目结构
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+> 项目总结

@@ -1,5 +1,5 @@
 'use strict'
-// Template version: 1.3.1
+// Template version: 1.2.4
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
@@ -11,17 +11,12 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/':{
-        // target: 'http://39.108.235.6/', // 正式
-        target: 'http://39.108.235.6:9002/', // 服务器dev
-        // target: 'http://39.108.235.6:9002/', // 服务器dev
-        changeOrigin: true,
-      }
+
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8077, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '192.168.1.103', // can be overwritten by process.env.HOST
+    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -40,14 +35,19 @@ module.exports = {
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-source-map',
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    // CSS Sourcemaps off by default because relative paths are "buggy"
+    // with this option, according to the CSS-Loader README
+    // (https://github.com/webpack/css-loader#sourcemaps)
+    // In our experience, they generally work as expected,
+    // just be aware of this issue when enabling this option.
+    cssSourceMap: false,
   },
 
   build: {
@@ -66,13 +66,6 @@ module.exports = {
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
-
-    // Gzip off by default as many popular static hosts such as
-    // Surge or Netlify already gzip all static assets for you.
-    // Before setting to `true`, make sure to:
-    // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css'],
 
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:

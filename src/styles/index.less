@@ -1,171 +1,182 @@
-@import "~iview/src/styles/index.less";
+@import './cover.less';
 
-@primary-color: #1cbc9c;
+@font-face {
+  font-family: 'iconfont';  /* project id 554437 */
+  src: url('//at.alicdn.com/t/font_554437_1f2duscpkby.eot');
+  src: url('//at.alicdn.com/t/font_554437_1f2duscpkby.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_554437_1f2duscpkby.woff') format('woff'),
+  url('//at.alicdn.com/t/font_554437_1f2duscpkby.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_554437_1f2duscpkby.svg#iconfont') format('svg');
+}
 
-// 系统样式
-body,
-html,
-.layout,
-.layout-content,
-#app {
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:14px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jilu2:before { content: "\e66b"; }
+
+.icon-fenxiang:before { content: "\e624"; }
+
+.icon-fanhui:before { content: "\e625"; }
+
+.icon-guanbi:before { content: "\e626"; }
+
+.icon-bofang:before { content: "\e627"; }
+
+.icon-kefu:before { content: "\e628"; }
+
+.icon-shenfenzheng:before { content: "\e629"; }
+
+.icon-quanping:before { content: "\e65a"; }
+
+.icon-duigou:before { content: "\e62a"; }
+
+.icon-shuoming:before { content: "\e65c"; }
+
+.icon-zanting:before { content: "\e65d"; }
+
+.icon-shoucang:before { content: "\e62b"; }
+
+.icon-jiantoushang:before { content: "\e62c"; }
+
+.icon-jiantoushang1:before { content: "\e62d"; }
+
+.icon-jiantouyou:before { content: "\e62e"; }
+
+.icon-jiantouxia:before { content: "\e62f"; }
+
+.icon-saoyisao:before { content: "\e664"; }
+
+.icon-wode:before { content: "\e630"; }
+
+.icon-shouye:before { content: "\e631"; }
+
+.icon-fenlei:before { content: "\e632"; }
+
+.icon-xiaoxi:before { content: "\e633"; }
+
+.icon-faxian:before { content: "\e634"; }
+
+.icon-sousuo:before { content: "\e635"; }
+
+.icon-liulan:before { content: "\e636"; }
+
+.icon-zhiding:before { content: "\e637"; }
+
+.icon-xuanzhong:before { content: "\e638"; }
+
+.icon-tabguanbi:before { content: "\e639"; }
+
+.icon-kexuanzuobiankuang:before { content: "\e670"; }
+
+.icon-bukexuanzuo:before { content: "\e671"; }
+
+.icon-yigouxuan:before { content: "\e63d"; }
+
+.icon-weigouxuan:before { content: "\e63e"; }
+
+.icon-guanyanren:before { content: "\e674"; }
+
+.icon-dingyue:before { content: "\e63f"; }
+
+.icon-dizhiguanli:before { content: "\e640"; }
+
+.icon-daifukuan:before { content: "\e641"; }
+
+.icon-daishouhuo:before { content: "\e642"; }
+
+.icon-huiyuan:before { content: "\e643"; }
+
+.icon-weishiyong:before { content: "\e644"; }
+
+.icon-pingjia:before { content: "\e645"; }
+
+.icon-qiandao:before { content: "\e646"; }
+
+.icon-zhuanchu:before { content: "\e647"; }
+
+.icon-zhuanru:before { content: "\e648"; }
+
+.icon-yanchurili:before { content: "\e649"; }
+
+.icon-changyonggoupiaorenbianji:before { content: "\e64a"; }
+
+.icon-changyonggoupiaorenshanchu:before { content: "\e64b"; }
+
+.icon-shouhuodizhiyebianji:before { content: "\e682"; }
+
+.icon-youhuiquan:before { content: "\e64c"; }
+
+.icon-weigouxuan2:before { content: "\e684"; }
+
+.icon-yigouxuan2:before { content: "\e685"; }
+
+.icon-tishishuoming:before { content: "\e64d"; }
+
+.icon-guanbi1:before { content: "\e64e"; }
+
+.icon-jiajianzujianjiahao:before { content: "\e64f"; }
+
+.icon-cainixihuan:before { content: "\e689"; }
+
+.icon-huanyihuan:before { content: "\e653"; }
+
+.icon-faxianjihuo:before { content: "\e655"; }
+
+.icon-shimingrenzheng:before { content: "\e68c"; }
+
+.icon-daohangdizhi:before { content: "\e68d"; }
+
+
+html, body{
+  height: 100%;
   width: 100%;
+  overflow-x: hidden;
+}
+
+#app{
   height: 100%;
 }
 
-.layout {
-  padding-top: 64px;
-  border: 1px solid #d7dde4;
-  background: #f5f7f9;
-  .layout-header {
-    position: fixed;
-    background: #fff;
-    width: 100%;
-    height: 60px;
-    top: 0;
-    left: 0;
-  }
+.p10{
+  padding: 0.625rem;
+}
 
-  .layout-content {
-    width: 100%;
-    height: 100%;
-  }
+.h230{
+  height: 14.375rem;
+}
 
-  .layout-content-main {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    .layout-content {
-      // width: 100%;
-      // height: 100%;
-      .content-row {
-        width: 100%;
-        height: 100%;
-        .content-span {
-          height: 100%;
-          .content-menu {
-            height: 100%;
-          }
-        }
-      }
-    }
+
+.slide-fade{
+  position: absolute;left:0;right: 0;
+}
+.slide-fade-enter-active {
+  transition: all 0.65s ease;
+}
+.slide-fade-leave-active {
+  transition: all .51s cubic-bezier(2.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+{
+  left:0;right: 0;
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.layout{
+  .router{
+    position: relative;
+    top: 2.875rem;
+    // padding: .625rem
   }
 }
 
-/**
- * 列表界面头部样式
- *
- */
-.search-bar {
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 5px;
-  background-color: white;
-  &:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-  }
-  .left {
-    float: left;
-    margin-left: 5px;
-    height: 40px;
-  }
-  .right {
-    float: right;
-    margin-right: 5px;
-    .left {
-      margin: 0 10px;
-    }
-  }
-}
-
-// 宽度 80 -220
-.w280 {
-  width: 280px;
-}
-.w220 {
-  width: 220px;
-}
-
-.w210 {
-  width: 210px;
-}
-
-.w200 {
-  width: 200px;
-}
-
-.w190 {
-  width: 190px;
-}
-
-.w180 {
-  width: 180px;
-}
-
-.w170 {
-  width: 170px;
-}
-
-.w160 {
-  width: 160px;
-}
-
-.w150 {
-  width: 150px;
-}
-
-.w140 {
-  width: 140px;
-}
-
-.w130 {
-  width: 130px;
-}
-
-.w120 {
-  width: 120px;
-}
-
-.w110 {
-  width: 110px;
-}
-.w210 {
-  width: 210px;
-}
-
-.w100 {
-  width: 100px;
-}
-
-.w90 {
-  width: 90px;
-}
-
-.w80 {
-  width: 80px;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
-.clearfix:after {
-  display: block;
-  content: "clear";
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
+.flex-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
